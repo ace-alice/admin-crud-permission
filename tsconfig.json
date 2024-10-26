@@ -1,6 +1,12 @@
 {
   "compilerOptions": {
     "declaration": true,
-    "declarationDir": "dist/types"
+    "declarationDir": "dist/types",
+    "lib": ["es2016", "dom"],
+    "moduleResolution": "node",
+    "baseUrl": "./",
+    "paths": {
+      "tslib": ["path/to/node_modules/tslib/tslib.d.ts"]
+    }
   }
 }

@@ -1,5 +1,2 @@
-export const getUser = (name: string) => {
-  return name;
-};
-
-console.log(getUser('tom'));
+import CRUD from './hooks/CRUD/lib/hook';
+export { CRUD };

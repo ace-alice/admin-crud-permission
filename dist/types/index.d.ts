@@ -1,1 +1,2 @@
-export declare const getUser: (name: string) => string;
+import CRUD from './hooks/CRUD/lib/hook';
+export { CRUD };
