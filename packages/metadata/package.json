@@ -1,0 +1,31 @@
+{
+  "name": "@admin-crud-permission/metadata",
+  "type": "module",
+  "version": "1.0.1",
+  "description": "Metadata for AdminCrudPermission functions",
+  "author": "Frank Lee <https://github.com/ace-alice>",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ace-alice/admin-crud-permission.git",
+    "directory": "packages/metadata"
+  },
+  "bugs": {
+    "url": "https://github.com/ace-alice/admin-crud-permission/issues"
+  },
+  "keywords": [],
+  "sideEffects": false,
+  "exports": {
+    ".": {
+      "import": "./index.mjs",
+      "require": "./index.cjs"
+    },
+    "./*": "./*"
+  },
+  "main": "./index.cjs",
+  "module": "./index.mjs",
+  "types": "./index.d.ts",
+  "files": [
+    "index.*"
+  ]
+}

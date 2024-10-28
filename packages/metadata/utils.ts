@@ -1,77 +1,77 @@
 /* eslint-disable no-async-promise-executor */
-import type { CrudHOOK, Row } from '../../../types';
+import type { CrudHOOK, Row } from './types';
 
 /**
  * CRUD钩子
  */
 
-export const HOOK: CrudHOOK<string | Function> = {
+export const HOOK: CrudHOOK<Function> = {
   /** 重置 - 之前 */
-  beforeReset: 'beforeCrudReset',
+  beforeReset: () => true,
   /** 重置 - 之后 */
-  afterReset: 'afterCrudReset',
+  afterReset: () => true,
   /** 刷新 - 之前 */
-  beforeRefresh: 'beforeCrudRefresh',
+  beforeRefresh: () => true,
   /** 刷新 - 之后 */
-  afterRefresh: 'afterCrudRefresh',
+  afterRefresh: () => true,
   /** 删除 - 之前 */
-  beforeDelete: 'beforeCrudDelete',
+  beforeDelete: () => true,
   /** 删除 - 之后 */
-  afterDelete: 'afterCrudDelete',
+  afterDelete: () => true,
   /** 删除取消 - 之前 */
-  beforeDeleteCancel: 'beforeCrudDeleteCancel',
+  beforeDeleteCancel: () => true,
   /** 删除取消 - 之后 */
-  afterDeleteCancel: 'afterCrudDeleteCancel',
+  afterDeleteCancel: () => true,
   /** 撤回 - 之前 */
-  beforeRecall: 'beforeCrudRecall',
+  beforeRecall: () => true,
   /** 撤回 - 之后 */
-  afterRecall: 'afterCrudRecall',
+  afterRecall: () => true,
   /** 撤回取消 - 之前 */
-  beforeRecallCancel: 'beforeCrudRecallCancel',
+  beforeRecallCancel: () => true,
   /** 撤回取消 - 之后 */
-  afterRecallCancel: 'afterCrudRecallCancel',
+  afterRecallCancel: () => true,
   /** 置顶/取消置顶 - 之前 */
-  beforeTop: 'beforeCrudTop',
+  beforeTop: () => true,
   /** 置顶/取消置顶 - 之后 */
-  afterTop: 'afterCrudTop',
+  afterTop: () => true,
   /** 置顶/取消置顶取消 - 之前 */
-  beforeTopCancel: 'beforeCrudTopCancel',
+  beforeTopCancel: () => true,
   /** 置顶/取消置顶取消 - 之后 */
-  afterTopCancel: 'afterCrudTopCancel',
+  afterTopCancel: () => true,
   /** 新建 - 之前 */
-  beforeToAdd: 'beforeCrudToAdd',
+  beforeToAdd: () => true,
   /** 新建 - 之后 */
-  afterToAdd: 'afterCrudToAdd',
+  afterToAdd: () => true,
   /** 编辑 - 之前 */
-  beforeToEdit: 'beforeCrudToEdit',
+  beforeToEdit: () => true,
   /** 编辑 - 之后 */
-  afterToEdit: 'afterCrudToEdit',
+  afterToEdit: () => true,
   /** 开始 "新建/编辑" - 之前 */
-  beforeToCU: 'beforeCrudToCU',
+  beforeToCU: () => true,
   /** 开始 "新建/编辑" - 之后 */
-  afterToCU: 'afterCrudToCU',
+  afterToCU: () => true,
   /** "新建/编辑" 验证 - 之前 */
-  beforeValidateCU: 'beforeCrudValidateCU',
+  beforeValidateCU: () => true,
   /** "新建/编辑" 验证 - 之后 */
-  afterValidateCU: 'afterCrudValidateCU',
+  afterValidateCU: () => true,
   /** 添加取消 - 之前 */
-  beforeAddCancel: 'beforeCrudAddCancel',
+  beforeAddCancel: () => true,
   /** 添加取消 - 之后 */
-  afterAddCancel: 'afterCrudAddCancel',
+  afterAddCancel: () => true,
   /** 编辑取消 - 之前 */
-  beforeEditCancel: 'beforeCrudEditCancel',
+  beforeEditCancel: () => true,
   /** 编辑取消 - 之后 */
-  afterEditCancel: 'afterCrudEditCancel',
+  afterEditCancel: () => true,
   /** 提交 - 之前 */
-  beforeSubmit: 'beforeCrudSubmitCU',
+  beforeSubmit: () => true,
   /** 提交 - 之后 */
-  afterSubmit: 'afterCrudSubmitCU',
+  afterSubmit: () => true,
   /** 添加失败 - 之后 */
-  afterAddError: 'afterCrudAddError',
+  afterAddError: () => true,
   /** 编辑失败 - 之后 */
-  afterEditError: 'afterCrudEditError',
+  afterEditError: () => true,
   /** 拖动结束 */
-  dragEnd: 'dragEnd'
+  dragEnd: () => true
 };
 
 export async function callVmHook(hook: Function | string, form?: Row) {
