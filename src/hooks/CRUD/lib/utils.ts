@@ -1,5 +1,5 @@
 /* eslint-disable no-async-promise-executor */
-import type { CrudHOOK, Row } from './interface';
+import type { CrudHOOK, Row } from '../../../types';
 
 /**
  * CRUD钩子
@@ -66,8 +66,11 @@ export const HOOK: CrudHOOK<string | Function> = {
   beforeSubmit: 'beforeCrudSubmitCU',
   /** 提交 - 之后 */
   afterSubmit: 'afterCrudSubmitCU',
+  /** 添加失败 - 之后 */
   afterAddError: 'afterCrudAddError',
+  /** 编辑失败 - 之后 */
   afterEditError: 'afterCrudEditError',
+  /** 拖动结束 */
   dragEnd: 'dragEnd'
 };
 

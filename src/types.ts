@@ -22,7 +22,7 @@ export interface CrudOptionsType {
   defaultForm?: Row;
   defaultQuery?: Row;
   crudMethod?: any;
-  unfixedSum?: any; // 合计不需要保存小鼠配置
+  unfixedSum?: any; // 合计不需要保存小数配置
   excludeSumColumn?: any; // 不需要计算合计列 key 集合 二选一
   includeSumColumn?: any; // 需要计算合计列 key 集合 二选一
   crudOptShow?: CrudOptShowType;

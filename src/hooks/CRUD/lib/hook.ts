@@ -19,7 +19,7 @@ import {
   type STATUSType,
   type crudPageType,
   type crudStatusType
-} from './interface';
+} from './../../../types';
 import { HOOK, callVmHook } from './utils';
 
 /**
