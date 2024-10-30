@@ -23,6 +23,9 @@ importers:
       '@commitlint/config-conventional':
         specifier: ^19.5.0
         version: 19.5.0
+      '@rollup/plugin-json':
+        specifier: ^6.1.0
+        version: 6.1.0(rollup@4.24.0)
       '@types/jest':
         specifier: ^29.5.14
         version: 29.5.14
@@ -758,6 +761,15 @@ packages:
   '@pnpm/npm-conf@2.3.1':
     resolution: {integrity: sha512-c83qWb22rNRuB0UaVCI0uRPNRr8Z0FWnEIvT47jiHAmOIUHbBOg5XvV7pM5x+rKn9HRpjxquDbXYSXr3fAKFcw==}
     engines: {node: '>=12'}
+
+  '@rollup/plugin-json@6.1.0':
+    resolution: {integrity: sha512-EGI2te5ENk1coGeADSIwZ7G2Q8CJS2sF120T7jLw4xFw9n7wIOXHo+kIYRAoVpJAN+kmqZSoO3Fp4JtoNF4ReA==}
+    engines: {node: '>=14.0.0'}
+    peerDependencies:
+      rollup: ^1.20.0||^2.0.0||^3.0.0||^4.0.0
+    peerDependenciesMeta:
+      rollup:
+        optional: true
 
   '@rollup/pluginutils@4.2.1':
     resolution: {integrity: sha512-iKnFXr7NkdZAIHiIWE+BX5ULi/ucVFYWD6TbAV+rZctiRTY2PL6tsIKhoIOaoskiWAkgu+VsbXgUVDNLHf+InQ==}
@@ -4226,6 +4238,12 @@ snapshots:
       '@pnpm/config.env-replace': 1.1.0
       '@pnpm/network.ca-file': 1.0.2
       config-chain: 1.1.13
+
+  '@rollup/plugin-json@6.1.0(rollup@4.24.0)':
+    dependencies:
+      '@rollup/pluginutils': 5.1.3(rollup@4.24.0)
+    optionalDependencies:
+      rollup: 4.24.0
 
   '@rollup/pluginutils@4.2.1':
     dependencies:

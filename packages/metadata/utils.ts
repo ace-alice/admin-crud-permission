@@ -74,18 +74,18 @@ export const HOOK: CrudHOOK<Function> = {
   dragEnd: () => true
 };
 
-export async function callVmHook(hook: Function | string, form?: Row) {
+export async function callVmHook(hook: Function, form?: Row) {
   return new Promise(async (resolve) => {
     let result = true;
-    if (hook && typeof hook == 'string') {
-      resolve(result);
-    } else if (hook && typeof hook == 'function') {
+    if (hook && typeof hook == 'function') {
       try {
         result = await hook(form);
         resolve(result);
       } catch (error) {
         resolve(false);
       }
+    } else {
+      resolve(result);
     }
   });
 }

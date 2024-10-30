@@ -2,12 +2,25 @@
   "compilerOptions": {
     "declaration": true,
     "declarationDir": "dist/types",
-    "lib": ["es2016", "dom"],
-    "moduleResolution": "node",
-    "baseUrl": "./",
+    "lib": ["ESNext", "DOM", "DOM.Iterable", "webworker"],
+    "module": "esnext",
+    "moduleResolution": "Bundler",
+    "baseUrl": ".",
+    "rootDir": ".",
+    "target": "es2020",
+    "jsx": "preserve",
     "paths": {
-      "tslib": ["path/to/node_modules/tslib/tslib.d.ts"]
+      "tslib": ["path/to/node_modules/tslib/tslib.d.ts"],
+      "@admin-crud-permission/core": ["./packages/vue/index.ts"],
+      "@admin-crud-permission/core/*": ["./packages/vue/*"],
+      "@admin-crud-permission/react": ["./packages/react/index.ts"],
+      "@admin-crud-permission/react/*": ["./packages/react/*"],
+      "@admin-crud-permission/metadata": ["./packages/metadata/index.ts"]
     },
-    "esModuleInterop": true
+    "esModuleInterop": true,
+    "resolveJsonModule": true,
+    "noUnusedLocals": true,
+    "skipDefaultLibCheck": true,
+    "skipLibCheck": true
   }
 }
